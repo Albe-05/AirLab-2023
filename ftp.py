@@ -36,6 +36,9 @@ def sendFiles():
     #path = os.getcwd() #directory del programma
     path = '/home/pi/Desktop/AirLab' # DA INSERIRE PERCORSO CORRETTO
 
+    for file in fileList(path.replace('\\', '\\\\')):
+    dotToCommas(f'{dir_path}\\{file}')
+    
     # Get a list of all files in the directory
     file_list = os.listdir(path)
 
